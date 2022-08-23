@@ -11,6 +11,8 @@ class Flog < Formula
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build", "--prefix", "#{prefix}"
+
+    man1.install "man/flog.1"
   end
 
   test do
