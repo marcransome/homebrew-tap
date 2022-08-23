@@ -6,6 +6,7 @@ class Flog < Formula
   license "MIT"
 
   depends_on "cmake" => :build
+  depends_on macos: ">= :big_sur"
 
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
