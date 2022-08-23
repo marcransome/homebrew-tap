@@ -5,8 +5,8 @@ class Flog < Formula
   sha256 "c5846d2a19815e1dc548170bf01d122d48bd72195e26f3af03e9e6ff6b097e7d"
   license "MIT"
 
+  depends_on :macos # Uses Apple's unified logging system
   depends_on "cmake" => :build
-  depends_on macos: ">= :big_sur"
 
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
