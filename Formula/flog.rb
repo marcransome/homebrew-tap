@@ -1,8 +1,8 @@
 class Flog < Formula
   desc "Command-line tool for sending log messages to Apple's unified logging system"
   homepage "https://github.com/marcransome/flog"
-  url "https://github.com/marcransome/flog/archive/1.0.0.tar.gz"
-  sha256 "c5846d2a19815e1dc548170bf01d122d48bd72195e26f3af03e9e6ff6b097e7d"
+  url "https://github.com/marcransome/flog/archive/1.1.0.tar.gz"
+  sha256 "c7fb564998a7c6a06e05803b9e95510d3f37579e2eb1d645935cb80415a7892d"
   license "MIT"
 
   depends_on "cmake" => :build
