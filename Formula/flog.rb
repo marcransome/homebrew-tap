@@ -27,6 +27,6 @@ class Flog < Formula
   end
 
   test do
-    system "#{bin}/flog", "--version"
+    system "#{bin}/flog", "--level", "debug", "'test message'"
   end
 end
