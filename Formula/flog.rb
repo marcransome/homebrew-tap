@@ -9,6 +9,16 @@ class Flog < Formula
   depends_on :macos
 
   def install
+    if OS.mac? && Hardware::CPU.intel?
+      opoo <<~ARM
+        You appear to be intalling flog on a system with Apple M-series CPU
+        (arm64); flog is currently untested on this architecture but should
+        build and function correctly. Please comment on the GitHub discussion
+        if you run into any issues:
+        https://github.com/marcransome/flog/discussions/41
+      ARM
+    end
+
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build", "--prefix", prefix.to_s
