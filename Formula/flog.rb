@@ -9,7 +9,7 @@ class Flog < Formula
   depends_on :macos
 
   def install
-    if OS.mac? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
       opoo <<~ARM
         You appear to be intalling flog on a system with Apple M-series CPU
         (arm64); flog is currently untested on this architecture but should
