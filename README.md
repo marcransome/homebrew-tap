@@ -18,7 +18,7 @@ Or `brew tap marcransome/tap` and then `brew install <formula>`.
 
 | Name   | Description                                                                    | Homepage                                                                   |
 |--------|--------------------------------------------------------------------------------|----------------------------------------------------------------------------|
-| `flog` | A command-line tool for sending log messages to Apple's unified logging system | [https://github.com/marcransome/flog](https://github.com/marcransome/flog) |
+| `flog` | A command-line tool for sending log messages to Apple's unified logging system | [github.com/marcransome/flog](https://github.com/marcransome/flog) |
 
 ## Documentation
 
