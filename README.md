@@ -34,4 +34,4 @@ Or `brew tap marcransome/tap` and then `brew install <formula>`.
 
 ## Contact
 
-Email me at [marc.ransome@fidgetbox.co.uk](mailto:marc.ransome@fidgetbox.co.uk) or tweet [@marcransome](http://www.twitter.com/marcransome).
+Email me at [marc.ransome@fidgetbox.co.uk](mailto:marc.ransome@fidgetbox.co.uk) or [create an issue](https://github.com/marcransome/homebrew-tap/issues).
