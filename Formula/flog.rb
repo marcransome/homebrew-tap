@@ -17,6 +17,8 @@ class Flog < Formula
   end
 
   test do
-    system "#{bin}/flog", "--level", "debug", "'test message'"
+    assert_predicate bin/"flog", :exist?
+    assert_predicate bin/"flog", :executable?
+    system bin/"flog", "--level", "debug", "'test message'"
   end
 end
