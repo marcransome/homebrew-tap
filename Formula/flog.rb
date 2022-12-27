@@ -19,6 +19,6 @@ class Flog < Formula
   test do
     assert_predicate bin/"flog", :exist?
     assert_predicate bin/"flog", :executable?
-    system bin/"flog", "--level", "debug", "'test message'"
+    system bin/"flog", "--level", "debug", "'flog installed'"
   end
 end
