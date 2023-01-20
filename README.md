@@ -4,21 +4,27 @@
 
 [![Issues](https://img.shields.io/github/issues/marcransome/homebrew-tap)](https://github.com/marcransome/homebrew-tap/issues) [![License](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/licenses/mit-license.php)
 
-A collection of formula definitions for the [Homebrew](https://brew.sh) package manager.
+A collection of formula/cask definitions for the [Homebrew](https://brew.sh) package manager.
 
 <hr>
 
-## How do I install these formulae?
+## How do I install these formulae/casks?
 
-`brew install marcransome/tap/<formula>`
+`brew install marcransome/tap/<formula|cask>`
 
-Or `brew tap marcransome/tap` and then `brew install <formula>`.
+Or `brew tap marcransome/tap` and then `brew install <formula|cask>`.
 
-## Available packages
+## Formulae
 
-| Name   | Description                                                                    | Homepage                                                                   |
-|--------|--------------------------------------------------------------------------------|----------------------------------------------------------------------------|
+| Name   | Description                                                                    | Homepage                                                           |
+|--------|--------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | `flog` | A command-line tool for sending log messages to Apple's unified logging system | [github.com/marcransome/flog](https://github.com/marcransome/flog) |
+
+## Casks
+
+| Name   | Description                                                                    | Homepage                                                           |
+|--------|--------------------------------------------------------------------------------|--------------------------------------------------------------------|
+| `plist-services` | macOS Quick Actions for converting property list files between XML and binary encodings | [github.com/marcransome/plist-services](https://github.com/marcransome/plist-services) |
 
 ## Documentation
 
