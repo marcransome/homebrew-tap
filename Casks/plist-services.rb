@@ -7,6 +7,6 @@ cask "plist-services" do
   desc "macOS Quick Actions for converting property list files between XML and binary encodings"
   homepage "https://www.github.com/marcransome/plist-services"
 
-  service "Convert to binary plist.workflow"
-  service "Convert to XML plist.workflow"
+  service "plist-services-#{version}/Convert to binary plist.workflow"
+  service "plist-services-#{version}/Convert to XML plist.workflow"
 end
