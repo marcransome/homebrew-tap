@@ -4,7 +4,7 @@ cask "plist-services" do
 
   url "https://github.com/marcransome/plist-services/archive/#{version}.tar.gz"
   name "plist-services"
-  desc "macOS Quick Actions for converting property list files between XML and binary encodings"
+  desc "Quick Actions for converting property list files between XML and binary encoding"
   homepage "https://www.github.com/marcransome/plist-services"
 
   service "plist-services-#{version}/Convert to binary plist.workflow"
