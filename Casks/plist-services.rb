@@ -9,4 +9,8 @@ cask "plist-services" do
 
   service "plist-services-#{version}/Convert to binary plist.workflow"
   service "plist-services-#{version}/Convert to XML plist.workflow"
+
+  caveats do
+    license "https://github.com/marcransome/plist-services/blob/#{version}/LICENSE"
+  end
 end
