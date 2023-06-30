@@ -5,8 +5,8 @@ class Flog < Formula
   sha256 "7fba0b9ff68b6c283d30f53f0d221750a11d84e7cf744662aedf3973b1744677"
   license "MIT"
 
-  depends_on :macos
   depends_on "cmake" => :build
+  depends_on :macos
   depends_on "popt"
 
   def install
