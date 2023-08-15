@@ -21,10 +21,14 @@ class Flog < Formula
   test do
     assert_predicate bin/"flog", :exist?
     assert_predicate bin/"flog", :executable?
+    assert_equal "flog #{version}", shell_output("#{bin}/flog --version").chomp
     system bin/"flog",
         "--subsystem", "uk.co.fidgetbox.flog",
         "--category", "internal",
         "--level", "debug",
-        "'Flog #{version} successfully installed'"
+        "--append", testpath/"output.txt",
+        "'Flog #{version} test message'"
+    assert_predicate testpath/"output.txt", :exist?
+    assert_match "Flog #{version} test message", shell_output("cat #{testpath}/output.txt").chomp
   end
 end
