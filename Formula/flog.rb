@@ -4,7 +4,7 @@ class Flog < Formula
   url "https://github.com/marcransome/flog/archive/1.4.0.tar.gz"
   sha256 "7fba0b9ff68b6c283d30f53f0d221750a11d84e7cf744662aedf3973b1744677"
   license "MIT"
-  revision 1
+  revision 2
 
   depends_on "cmake" => :build
   depends_on :macos
@@ -27,7 +27,7 @@ class Flog < Formula
         "--category", "internal",
         "--level", "debug",
         "--append", testpath/"output.txt",
-        "'Flog #{version} test message'"
+        "Flog #{version} test message"
     assert_predicate testpath/"output.txt", :exist?
     assert_match "Flog #{version} test message", shell_output("cat #{testpath}/output.txt").chomp
   end
