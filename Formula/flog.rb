@@ -4,6 +4,7 @@ class Flog < Formula
   url "https://github.com/marcransome/flog/archive/1.4.0.tar.gz"
   sha256 "7fba0b9ff68b6c283d30f53f0d221750a11d84e7cf744662aedf3973b1744677"
   license "MIT"
+  revision 1
 
   depends_on "cmake" => :build
   depends_on :macos
@@ -20,6 +21,10 @@ class Flog < Formula
   test do
     assert_predicate bin/"flog", :exist?
     assert_predicate bin/"flog", :executable?
-    system bin/"flog", "--level", "debug", "'flog installed'"
+    system bin/"flog",
+        "--subsystem", "uk.co.fidgetbox.flog",
+        "--category", "internal",
+        "--level", "debug",
+        "'Flog #{version} successfully installed'"
   end
 end
