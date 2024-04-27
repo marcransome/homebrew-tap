@@ -4,6 +4,7 @@ class Flog < Formula
   url "https://github.com/marcransome/flog/archive/refs/tags/v1.6.0.tar.gz"
   sha256 "81e01813b6f7f4e96d274733a71ccdbc905bd9d05dfcb713e3f6b55aa3892fe5"
   license "MIT"
+  revision 1
 
   depends_on :macos
   depends_on "popt"
