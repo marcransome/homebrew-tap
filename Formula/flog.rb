@@ -2,7 +2,7 @@ class Flog < Formula
   desc "Command-line tool for sending log messages to Apple's unified logging system"
   homepage "https://github.com/marcransome/flog"
   url "https://github.com/marcransome/flog/archive/refs/tags/v1.6.0.tar.gz"
-  sha256 "86b63fd1a0b467b515e64fe6dfd34ad7e5eb5b73ffc9219657c08065f8b4ea2f"
+  sha256 "81e01813b6f7f4e96d274733a71ccdbc905bd9d05dfcb713e3f6b55aa3892fe5"
   license "MIT"
 
   depends_on :macos
