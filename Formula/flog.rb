@@ -1,8 +1,8 @@
 class Flog < Formula
   desc "Command-line tool for sending log messages to Apple's unified logging system"
   homepage "https://github.com/marcransome/flog"
-  url "https://github.com/marcransome/flog/archive/refs/tags/v1.7.0.tar.gz"
-  sha256 "19a9333b553264f388cb93e0c0dbe4c5b629f3edcdc3eb02afd4776b96e6e525"
+  url "https://github.com/marcransome/flog/archive/refs/tags/v1.7.2.tar.gz"
+  sha256 "d344bee2897708b81cb9b0018994368225cf7f1b874c92acb6aeb2390dbf617c"
   license "MIT"
 
   depends_on :macos
@@ -10,13 +10,13 @@ class Flog < Formula
 
   resource "binary" do
     on_arm do
-      url "https://github.com/marcransome/flog/releases/download/v1.7.0/flog-v1.7.0-darwin-arm64.tar.xz"
-      sha256 "989d8d868fb134b64f3275c092c88b108b6629c8ebc2e7280b20ed51a270e690"
+      url "https://github.com/marcransome/flog/releases/download/v1.7.2/flog-v1.7.2-darwin-arm64.tar.xz"
+      sha256 "2a248ff17809ece0b2631d8e5052fbb9d69b3063d9f47d30cb82f801fcf39117"
     end
 
     on_intel do
-      url "https://github.com/marcransome/flog/releases/download/v1.7.0/flog-v1.7.0-darwin-x86_64.tar.xz"
-      sha256 "6791701cd487c9106900aaef3840fa9be1d3f8ca1469089616b0bbe4f96ef4d3"
+      url "https://github.com/marcransome/flog/releases/download/v1.7.2/flog-v1.7.2-darwin-x86_64.tar.xz"
+      sha256 "05b56ec7cb1e0b8372db3b0991b365c40775578e0276ed8f6084ccd00ede0e2a"
     end
   end
 
@@ -32,14 +32,14 @@ class Flog < Formula
     assert_predicate bin/"flog", :executable?
     assert_predicate prefix/"README.md", :exist?
     assert_predicate prefix/"LICENSE", :exist?
-    assert_equal "flog v1.7.0", shell_output("#{bin}/flog --version").chomp
+    assert_equal "flog v1.7.2", shell_output("#{bin}/flog --version").chomp
     system bin/"flog",
         "--subsystem", "uk.co.fidgetbox.flog",
         "--category", "internal",
         "--level", "debug",
         "--append", testpath/"output.txt",
-        "Flog v1.7.0 test message"
+        "Flog v1.7.2 test message"
     assert_predicate testpath/"output.txt", :exist?
-    assert_match "Flog v1.7.0 test message", shell_output("cat #{testpath}/output.txt").chomp
+    assert_match "Flog v1.7.2 test message", shell_output("cat #{testpath}/output.txt").chomp
   end
 end
