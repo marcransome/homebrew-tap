@@ -28,10 +28,10 @@ class Flog < Formula
   end
 
   test do
-    assert_predicate bin/"flog", :exist?
+    assert_path_exists bin/"flog"
     assert_predicate bin/"flog", :executable?
-    assert_predicate prefix/"README.md", :exist?
-    assert_predicate prefix/"LICENSE", :exist?
+    assert_path_exists prefix/"README.md"
+    assert_path_exists prefix/"LICENSE"
     assert_equal "flog v1.7.3", shell_output("#{bin}/flog --version").chomp
     system bin/"flog",
         "--subsystem", "uk.co.fidgetbox.flog",
@@ -39,7 +39,7 @@ class Flog < Formula
         "--level", "debug",
         "--append", testpath/"output.txt",
         "Flog v1.7.3 test message"
-    assert_predicate testpath/"output.txt", :exist?
+    assert_path_exists testpath/"output.txt"
     assert_match "Flog v1.7.3 test message", shell_output("cat #{testpath}/output.txt").chomp
   end
 end
